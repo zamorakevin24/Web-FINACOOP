@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Nuestros Beneficios - FINACOOP">
+    <title>Nuestros Beneficios - FINACOOP</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .beneficios-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .beneficios-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .beneficios-intro h2 {
+            color: #2b4c8f;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .beneficios-intro h2 .highlight {
+            color: #6db33f;
+        }
+        
+        .beneficios-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .beneficios-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .beneficio-card {
+            background: linear-gradient(135deg, #2b4c8f 0%, #1e3a6f 100%);
+            border-radius: 16px;
+            padding: 40px 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            border-left: 6px solid #6db33f;
+        }
+        
+        .beneficio-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+        
+        .beneficio-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .beneficio-icon svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+        
+        .beneficio-content {
+            flex: 1;
+        }
+        
+        .beneficio-titulo {
+            color: white;
+            font-size: 22px;
+            font-weight: 900;
+            text-align: left;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        
+        .beneficio-descripcion {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: left;
+        }
+        
+        .beneficio-full {
+            max-width: 100%;
+        }
+        
+        .beneficios-footer {
+            background: linear-gradient(135deg, #2b4c8f 0%, #1e3a6f 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 60px;
+            text-align: center;
+            color: white;
+        }
+        
+        .beneficios-footer h3 {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .beneficios-footer p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .beneficios-footer .highlight-green {
+            color: #6db33f;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .beneficios-grid {
+                gap: 25px;
+            }
+            
+            .beneficios-intro h2 {
+                font-size: 32px;
+            }
+            
+            .beneficio-card {
+                padding: 30px 25px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .beneficio-titulo {
+                font-size: 20px;
+                text-align: center;
+            }
+            
+            .beneficio-descripcion {
+                text-align: center;
+            }
+            
+            .beneficios-footer {
+                padding: 30px 25px;
+            }
+            
+            .beneficios-footer h3 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="../index.html" class="logo-link">
+                        <img src="../img/logo-finacoop1.png" alt="FINACOOP Logo">
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Overlay -->
+                <div class="nav-overlay"></div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Conócenos <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="resena-historica.html" class="dropdown-link">Historia</a></li>
+                                <li><a href="mision-vision.html" class="dropdown-link">Misión y Visión</a></li>
+                                <li><a href="valores.html" class="dropdown-link">Nuestros Valores</a></li>
+                                <li><a href="educacion-financiera.html" class="dropdown-link">Educación Financiera</a></li>
+                                <li><a href="comites.html" class="dropdown-link">Comités</a></li>
+                                <li><a href="cuerpo-directivo.html" class="dropdown-link">Cuerpo Directivo</a></li>
+                                <li><a href="estados-financieros.html" class="dropdown-link">Estados Financieros</a></li>
+                                <li><a href="memorias.html" class="dropdown-link">Memorias</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Productos <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="cuentas-ahorro.html" class="dropdown-link">Cuentas de Ahorro</a></li>
+                                <li><a href="depositos-plazo-fijo.html" class="dropdown-link">Depósitos a Plazo Fijo</a></li>
+                                <li><a href="prestamos.html" class="dropdown-link">Préstamos</a></li>
+                                <li><a href="promociones-sorteos.html" class="dropdown-link">Promociones y Sorteos</a></li>
+                                <li><a href="tarifario.html" class="dropdown-link">Tarifario</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="beneficios.html" class="nav-link active">Beneficios</a></li>
+                        <li><a href="activos-eventuales.html" class="nav-link">Activos Eventuales</a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Atención al Cooperativista <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="derechos-obligaciones.html" class="dropdown-link">Derechos y Obligaciones del Cooperativista</a></li>
+                                <li><a href="cat.html" class="dropdown-link">Costo Anual Total (CAT)</a></li>
+                                <li><a href="contratos.html" class="dropdown-link">Contratos</a></li>
+                                <li><a href="procedimiento-reclamos.html" class="dropdown-link">Procedimiento de Reclamos</a></li>
+                                <li><a href="cuentas-inactivas.html" class="dropdown-link">Listado de Cuentas Inactivas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Contáctenos <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="filiales.html" class="dropdown-link">Filiales</a></li>
+                                <li><a href="formulario-contacto.html" class="dropdown-link">Formulario de Contacto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://www.facebook.com/FINACOOPmicooperativa" target="_blank" rel="noopener" class="social-sidebar-btn facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/finacoopmicooperativa/" target="_blank" rel="noopener" class="social-sidebar-btn instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+        <a href="https://wa.me/50433071010" target="_blank" rel="noopener" class="social-sidebar-btn whatsapp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </a>
+        <a href="https://www.tiktok.com/@cooperativa.finacoop" target="_blank" rel="noopener" class="social-sidebar-btn tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestros Beneficios</h1>
+            </div>
+        </section>
+
+        <!-- Beneficios Content -->
+        <section class="beneficios-container">
+            <div class="beneficios-intro">
+                <h2>NUESTROS <span class="highlight">BENEFICIOS</span></h2>
+                <p>En FINACOOP trabajamos para ofrecerte las mejores ventajas y servicios que te ayuden a alcanzar tus metas financieras con solidez, prestigio y respaldo.</p>
+            </div>
+
+            <div class="beneficios-grid">
+                <!-- Beneficio 1 -->
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                        </svg>
+                    </div>
+                    <div class="beneficio-content">
+                        <h3 class="beneficio-titulo">Tasas Accesibles y Competitivas</h3>
+                        <p class="beneficio-descripcion">Disfruta de tasas de interés preferenciales en todos nuestros productos financieros, diseñadas para maximizar tus ahorros y hacer más accesibles tus préstamos.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 2 -->
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                    </div>
+                    <div class="beneficio-content">
+                        <h3 class="beneficio-titulo">Promociones y Sorteos Exclusivos</h3>
+                        <p class="beneficio-descripcion">Participa en sorteos especiales y promociones diseñadas exclusivamente para nuestros cooperativistas, con increíbles premios durante todo el año.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 3 -->
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                        </svg>
+                    </div>
+                    <div class="beneficio-content">
+                        <h3 class="beneficio-titulo">Préstamos Asegurados</h3>
+                        <p class="beneficio-descripcion">Nuestros préstamos cuentan con seguro de vida, brindándote tranquilidad y protección a ti y a tu familia en todo momento.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 4 -->
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.14 12.94c0.04-0.3 0.06-0.61 0.06-0.94 0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14 0.23-0.41 0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39 0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4 2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24 0-0.43 0.17-0.47 0.41L9.25 5.35C8.66 5.59 8.12 5.92 7.63 6.29L5.24 5.33c-0.22-0.08-0.47 0-0.59 0.22L2.74 8.87C2.62 9.08 2.66 9.34 2.86 9.48l2.03 1.58C4.84 11.36 4.8 11.69 4.8 12s0.02 0.64 0.07 0.94l-2.03 1.58c-0.18 0.14-0.23 0.41-0.12 0.61l1.92 3.32c0.12 0.22 0.37 0.29 0.59 0.22l2.39-0.96c0.5 0.38 1.03 0.7 1.62 0.94l0.36 2.54c0.05 0.24 0.24 0.41 0.48 0.41h3.84c0.24 0 0.44-0.17 0.47-0.41l0.36-2.54c0.59-0.24 1.13-0.56 1.62-0.94l2.39 0.96c0.22 0.08 0.47 0 0.59-0.22l1.92-3.32c0.12-0.22 0.07-0.47-0.12-0.61L19.14 12.94zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6S13.98 15.6 12 15.6z"/>
+                        </svg>
+                    </div>
+                    <div class="beneficio-content">
+                        <h3 class="beneficio-titulo">Participación en Proyectos de Desarrollo</h3>
+                        <p class="beneficio-descripcion">Como cooperativista, formas parte de proyectos de desarrollo comunitario y social que benefician a nuestros afiliados y a la comunidad en general.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 5 -->
+                <div class="beneficio-card beneficio-full">
+                    <div class="beneficio-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <div class="beneficio-content">
+                        <h3 class="beneficio-titulo">Asesoría Financiera Personalizada</h3>
+                        <p class="beneficio-descripcion">Recibe orientación y asesoramiento financiero personalizado de nuestros expertos para tomar las mejores decisiones sobre tus finanzas y alcanzar tus objetivos económicos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Call to Action -->
+            <div class="beneficios-footer">
+                <h3>¡Únete a FINACOOP y disfruta de todos estos beneficios!</h3>
+                <p>Somos más que una cooperativa, somos tu aliado financiero con <span class="highlight-green">SOLIDEZ, PRESTIGIO y RESPALDO</span>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Logo y descripción -->
+                    <div class="footer-logo-section">
+                        <div class="footer-logo">
+                            <img src="../img/logo-finacoop1.png" alt="FINACOOP Logo">
+                        </div>
+                    </div>
+                    
+                    <!-- Columnas de información -->
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h4>Información</h4>
+                            <ul>
+                                <li><a href="resena-historica.html">Reseña Histórica</a></li>
+                                <li><a href="mision-vision.html">Misión y Visión</a></li>
+                                <li><a href="valores.html">Nuestros Valores</a></li>
+                                <li><a href="filiales.html">Nuestras Filiales</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Productos</h4>
+                            <ul>
+                                <li><a href="cuentas-ahorro.html">Cuentas de Ahorro</a></li>
+                                <li><a href="depositos-plazo-fijo.html">Depósitos a Plazo Fijo</a></li>
+                                <li><a href="prestamos.html">Préstamos</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>De Interés</h4>
+                            <ul>
+                                <li><a href="beneficios.html">Beneficios</a></li>
+                                <li><a href="activos-eventuales.html">Activos Eventuales</a></li>
+                                <li><a href="estados-financieros.html">Estados Financieros</a></li>
+                                <li><a href="memorias.html">Memorias</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Contáctanos</h4>
+                            <ul class="contact-info">
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    Tegucigalpa, Honduras
+                                </li>
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    +504 3307-1010
+                                </li>
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                    oficialdeatencion@finacoop.hn
+                                </li>
+                            </ul>
+                            <div class="footer-social-inline">
+                                <h4>Síguenos</h4>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/FINACOOPmicooperativa" target="_blank" rel="noopener" aria-label="Facebook">
+                                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/finacoopmicooperativa/" target="_blank" rel="noopener" aria-label="Instagram">
+                                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.40s-.644-1.44-1.439-1.44z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://wa.me/50433071010" target="_blank" rel="noopener" aria-label="WhatsApp">
+                                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 COOPERATIVA FINACOOP LTDA. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
