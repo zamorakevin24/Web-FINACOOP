@@ -119,13 +119,13 @@
                 
                 <!-- Comité de Educación -->
                 <div class="comite-card" style="margin-bottom: 50px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-                    <div style="display: grid; grid-template-columns: 450px 1fr; gap: 0; align-items: stretch;">
+                    <div class="comite-grid" style="display: grid; grid-template-columns: 450px 1fr; gap: 0; align-items: stretch;">
                         <!-- Imagen -->
-                        <div style="background: linear-gradient(135deg, #4a7c59 0%, #6db544 100%); height: auto; min-height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <div class="comite-media" style="background: linear-gradient(135deg, #4a7c59 0%, #6db544 100%); height: auto; min-height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                             <img src="../img/comite-educacion.jpg" alt="Comité de Educación" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <!-- Contenido -->
-                        <div style="padding: 45px 45px; background: #fafbfc; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="comite-body" style="padding: 45px 45px; background: #fafbfc; display: flex; flex-direction: column; justify-content: center;">
                             <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                                 <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #4a7c59 0%, #6db544 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                                     <svg style="width: 40px; height: 40px; fill: white;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -152,9 +152,9 @@
 
                 <!-- Comité de Género -->
                 <div class="comite-card" style="margin-bottom: 50px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-                    <div style="display: grid; grid-template-columns: 1fr 450px; gap: 0; align-items: stretch;">
+                    <div class="comite-grid" style="display: grid; grid-template-columns: 1fr 450px; gap: 0; align-items: stretch;">
                         <!-- Contenido -->
-                        <div style="padding: 45px 45px; background: #fafbfc; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="comite-body" style="padding: 45px 45px; background: #fafbfc; display: flex; flex-direction: column; justify-content: center;">
                             <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                                 <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #7c4a8e 0%, #a564b8 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                                     <svg style="width: 40px; height: 40px; fill: white;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -175,7 +175,7 @@
                             </ul>
                         </div>
                         <!-- Imagen -->
-                        <div style="background: linear-gradient(135deg, #7c4a8e 0%, #a564b8 100%); height: auto; min-height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <div class="comite-media" style="background: linear-gradient(135deg, #7c4a8e 0%, #a564b8 100%); height: auto; min-height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                             <img src="../img/comite-genero.jpg" alt="Comité de Género" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
@@ -183,13 +183,13 @@
 
                 <!-- Comité de Juventud -->
                 <div class="comite-card" style="margin-bottom: 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-                    <div style="display: grid; grid-template-columns: 450px 1fr; gap: 0; align-items: stretch;">
+                    <div class="comite-grid" style="display: grid; grid-template-columns: 450px 1fr; gap: 0; align-items: stretch;">
                         <!-- Imagen -->
-                        <div style="background: linear-gradient(135deg, #2980b9 0%, #3498db 100%); height: auto; min-height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <div class="comite-media" style="background: linear-gradient(135deg, #2980b9 0%, #3498db 100%); height: auto; min-height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                             <img src="../img/comite-juventud.jpg" alt="Comité de Juventud" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <!-- Contenido -->
-                        <div style="padding: 45px 45px; background: #fafbfc; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="comite-body" style="padding: 45px 45px; background: #fafbfc; display: flex; flex-direction: column; justify-content: center;">
                             <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                                 <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #2980b9 0%, #3498db 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                                     <svg style="width: 40px; height: 40px; fill: white;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -311,30 +311,50 @@
     <style>
         /* Estilos responsive para los comités */
         @media (max-width: 1024px) {
-            .comite-card > div {
-                grid-template-columns: 1fr !important;
+            .comite-grid {
+                display: flex !important;
+                flex-direction: column;
+                gap: 0;
             }
-            
-            .comite-card > div > div:first-child,
-            .comite-card > div > div:nth-child(2) {
-                height: 280px !important;
+
+            .comite-media {
+                order: 1;
+                width: 100% !important;
+                height: auto !important;
+                min-height: 220px;
+                margin: 0;
+            }
+
+            .comite-media img {
+                width: 100% !important;
+                height: auto !important;
+                display: block;
+                object-fit: cover;
+            }
+
+            .comite-body {
+                order: 2;
+                padding: 32px 28px !important;
             }
         }
 
         @media (max-width: 768px) {
-            .comite-card > div {
-                grid-template-columns: 1fr !important;
+            .comite-grid {
+                display: flex !important;
+                flex-direction: column;
             }
-            
-            .comite-card > div > div:first-child,
-            .comite-card > div > div:nth-child(2) {
-                height: 250px !important;
+
+            .comite-media {
+                order: 1;
+                min-height: 200px;
+                margin: 0 0 12px 0;
             }
-            
-            .comite-card > div > div:not(:has(img)) {
-                padding: 30px 25px !important;
+
+            .comite-body {
+                order: 2;
+                padding: 28px 24px !important;
             }
-            
+
             .comite-card h2 {
                 font-size: 20px !important;
             }
