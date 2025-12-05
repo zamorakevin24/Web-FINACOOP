@@ -1179,6 +1179,46 @@ main {
 }
 
 /* ================================
+   MAPA DE FILIALES
+   ================================ */
+.mapa-filiales-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.mapa-filiales-container {
+    text-align: center;
+}
+
+.mapa-filiales-container h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #2c5aa0;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.mapa-image {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mapa-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mapa-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
    HISTORY SECTION
    ================================ */
 .history-section {
@@ -1275,6 +1315,19 @@ main {
     
     .page-header h1 {
         font-size: 40px;
+    }
+    
+    .mapa-filiales-section {
+        padding: 40px 0;
+    }
+    
+    .mapa-filiales-container h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .mapa-image {
+        padding: 0 15px;
     }
     
     .history-content {
