@@ -33,28 +33,34 @@
     }
     
     .header-content {
-        padding: 0 0px 0 80px;
+        padding: 0 20px 0 120px;
         min-height: 60px;
         justify-content: space-between;
+        gap: 30px;
     }
     
     .logo {
-        max-width: 140px;
+        max-width: 100px;
+        flex-shrink: 0;
     }
     
     .logo img {
-        max-width: 130px;
-        height: auto;
+        height: 80px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+        object-position: left center;
     }
     
     .nav-menu {
-        gap: 5px;
-        justify-content: center;
+        gap: 4px;
+        justify-content: flex-end;
+        flex: 1;
     }
     
     .nav-link {
-        font-size: 11px;
-        padding: 8px 10px;
+        font-size: 10px;
+        padding: 7px 13px;
         white-space: nowrap;
     }
     
@@ -68,7 +74,7 @@
     }
     
     .dropdown-link {
-        font-size: 10.5px;
+        font-size: 11px;
         padding: 7px 10px;
     }
     
