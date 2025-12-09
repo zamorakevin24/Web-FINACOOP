@@ -4312,6 +4312,52 @@ main {
     fill: white;
 }
 
+/* Botón Flotante de Contacto */
+.contact-float-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    z-index: 999;
+    transition: all 0.3s ease;
+    animation: float-pulse 2s ease-in-out infinite;
+}
+
+.contact-float-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+}
+
+.contact-float-btn svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.contact-float-btn span {
+    white-space: nowrap;
+}
+
+@keyframes float-pulse {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
 /* Responsive Estados Financieros */
 @media (max-width: 768px) {
     .pdf-viewer {
