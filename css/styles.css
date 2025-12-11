@@ -4223,6 +4223,14 @@ main {
     display: block;
 }
 
+.mobile-only {
+    display: none;
+}
+
+.pdf-open-btn {
+    margin-top: 12px;
+}
+
 .previous-documents-section {
     padding-top: 60px;
     padding-bottom: 80px;
@@ -4495,6 +4503,10 @@ main {
 @media (max-width: 768px) {
     .pdf-viewer {
         height: 500px;
+    }
+    
+    .mobile-only {
+        display: inline-flex;
     }
     
     .documents-grid {
