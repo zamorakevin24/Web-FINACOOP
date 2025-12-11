@@ -124,11 +124,22 @@
                     <h2 class="section-title-center">Listado de Cuentas Inactivas</h2>
                     <p class="section-description">Consulta el listado oficial de cuentas inactivas de FINACOOP</p>
                     
+                    <div class="download-section" style="text-align:center; margin-bottom:20px;">
+                        <a href="../documents/cuentas-inactivas.pdf" target="_blank" rel="noopener" class="download-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M14 3l7 7-1.41 1.41L15 7.83V20h-2V7.83l-4.59 4.58L7 10z"/>
+                            </svg>
+                            Ver en el navegador
+                        </a>
+                    </div>
+                    
                     <div class="pdf-viewer-container">
-                        <iframe src="../documents/cuentas-inactivas.pdf" 
+                        <object data="../documents/cuentas-inactivas.pdf" 
+                                type="application/pdf" 
                                 class="pdf-viewer" 
-                                title="Listado de Cuentas Inactivas">
-                        </iframe>
+                                aria-label="Listado de Cuentas Inactivas">
+                            <p>Tu dispositivo no puede mostrar el PDF incrustado. Puedes abrirlo aquí: <a href="../documents/cuentas-inactivas.pdf" target="_blank" rel="noopener">Ver PDF</a>.</p>
+                        </object>
                     </div>
                 </div>
             </div>

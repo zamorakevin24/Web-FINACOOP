@@ -53,6 +53,10 @@
             margin-right: 10px;
         }
         
+        .download-btn + .download-btn {
+            margin-left: 12px;
+        }
+        
         @media (max-width: 768px) {
             .pdf-viewer {
                 height: 600px;
@@ -177,13 +181,21 @@
                     </svg>
                     Descargar Tarifario 2025
                 </a>
+                <a href="../documents/tarifario-2025.pdf" target="_blank" rel="noopener" class="download-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M14 3l7 7-1.41 1.41L15 7.83V20h-2V7.83l-4.59 4.58L7 10z"/>
+                    </svg>
+                    Ver en el navegador
+                </a>
             </div>
             
-            <iframe 
-                src="../documents/tarifario-2025.pdf" 
+            <object 
+                data="../documents/tarifario-2025.pdf" 
+                type="application/pdf" 
                 class="pdf-viewer"
-                title="Tarifario 2025">
-            </iframe>
+                aria-label="Tarifario 2025">
+                <p>Tu dispositivo no puede mostrar el PDF incrustado. Puedes abrirlo aquí: <a href="../documents/tarifario-2025.pdf" target="_blank" rel="noopener">Ver PDF</a>.</p>
+            </object>
         </section>
     </main>
 
